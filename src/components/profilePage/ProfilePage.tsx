@@ -31,6 +31,9 @@ const ProfilePage = (props: Props) => {
       <div className="profile-list-card">
         {profiles.map((p) => profileCard(p.name, p.image))}
       </div>
+      <div className="profile-manage">
+        Manage Profile
+      </div>
     </div>
   );
 };
