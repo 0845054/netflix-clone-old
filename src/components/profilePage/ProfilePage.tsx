@@ -1,8 +1,8 @@
 import React from "react";
-import dog from "../../assets/dog.png";
-import kid from "../../assets/kid.png";
-import penguin from "../../assets/penguin.png";
-import addIcon from "../../assets/add-icon.png";
+import dog from "../../assets/Dog.png";
+import kid from "../../assets/Kid.png";
+import penguin from "../../assets/Penguin.png";
+import Add from "../../assets/Add.png";
 
 import "./ProfilePage.css";
 
@@ -12,14 +12,18 @@ const profiles = [
   { name: "Kayden", image: dog },
   { name: "Mary", image: kid },
   { name: "Kids", image: penguin },
-  { name: "Add Profile", image: addIcon },
+  { name: "Add Profile", image: Add },
 ];
 
 const profileCard = (name: string, image: string) => {
+  var cn = "profile-img";
+  if (name === "Add Profile") {
+    cn = "add-profile-img";
+  }
   return (
     <div className="profile-card">
-      <img src={image} alt="Missing" className="profile-img" />
-      <div>{name}</div>
+      <img src={image} alt="Missing" className={cn} />
+      <div className="profile-name">{name}</div>
     </div>
   );
 };
@@ -31,9 +35,7 @@ const ProfilePage = (props: Props) => {
       <div className="profile-list-card">
         {profiles.map((p) => profileCard(p.name, p.image))}
       </div>
-      <div className="profile-manage">
-        Manage Profile
-      </div>
+      <div className="profile-manage">Manage Profile</div>
     </div>
   );
 };

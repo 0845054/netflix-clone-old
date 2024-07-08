@@ -15,4 +15,25 @@
 .Cover-title {
   font-size: 144px;
   font-family: Arial, Helvetica, sans-serif;
+  transition: transform 0.2s;
+}
+
+.Cover-title:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Cover-title:hover {
+    animation: Cover-title-spin infinite 1s linear;
+  }
+}
+
+@keyframes Cover-title-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

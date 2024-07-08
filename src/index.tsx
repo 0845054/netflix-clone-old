@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cover from "./components/cover/Cover";
 import ProfilePage from "./components/profilePage/ProfilePage";
+import Landing from "./components/landing/Landing";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -16,7 +17,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<Cover />} />
+          <Route index element={<Landing />} />
+          <Route path="cover" element={<Cover />} />
           <Route path="profile" element={<ProfilePage />} />
         </Route>
       </Routes>
