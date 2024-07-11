@@ -4,7 +4,7 @@ import "./index.css";
 import "./constants.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Cover from "./components/cover/Cover";
 import ProfilePage from "./components/profilePage/ProfilePage";
 import Landing from "./components/landing/Landing";
@@ -20,6 +20,7 @@ root.render(
           <Route index element={<Landing />} />
           <Route path="cover" element={<Cover />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="*" element={<Navigate to={"/"}/>} />
         </Route>
       </Routes>
     </BrowserRouter>

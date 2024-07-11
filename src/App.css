@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+.outlet-container {
+  width: 100%;
+}
+
 /* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
