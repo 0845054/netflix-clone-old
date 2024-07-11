@@ -40,3 +40,28 @@
   color: var(--white-color);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.landing-text {
+  color: var(--white-color);
+}
+
+.landing-subtitle {
+  color: var(--white-color);
+  font-size: 1.3rem;
+}
+
+.landing-email {
+  padding-top: 1rem;
+}
+
+.email-input-container {
+  padding-top: 0.5rem;
+}
+
+.landing-email-input {
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.2rem;
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
