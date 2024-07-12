@@ -85,19 +85,21 @@ const Landing = (props: Props) => {
       </div>
       <div className="hero-3-containers">
         {contentList.map((c) => {
-          var even = c.id % 2 === 0;
+          var isEven = c.id % 2 === 0;
           return (
             <div className="hero-3-container">
               <img
                 className={
-                  even ? "hero-3-left hero-img" : "hero-3-right hero-img"
+                  isEven ? "hero-3-left hero-img" : "hero-3-right hero-img"
                 }
                 src={c.image}
                 alt="missing"
               />
               <div
                 className={
-                  even ? "hero-3-right hero-3-info" : "hero-3-left hero-3-info"
+                  isEven
+                    ? "hero-3-right hero-3-info"
+                    : "hero-3-left hero-3-info"
                 }
               >
                 <h1 className="hero-3-title">{c.title}</h1>
