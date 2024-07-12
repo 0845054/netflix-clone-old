@@ -1,0 +1,49 @@
+.signin-container {
+  color: var(--white-color);
+  width: 100%;
+  height: 100%;
+  color: var(--red-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+
+.signin-input-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 314px;
+  height: 580px;
+  border-radius: 0.5rem;
+  padding: 25px 68px 130px;
+}
+
+.signin-title {
+  color: var(--white-color);
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.signin-input {
+  height: 150px;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.email-input {
+  width: fill   ;
+}
+
+.signin-btn {
+  height: 100%;
+  width: 100%;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 0;
+}

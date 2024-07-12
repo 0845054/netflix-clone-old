@@ -8,6 +8,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Cover from "./components/cover/Cover";
 import ProfilePage from "./components/profilePage/ProfilePage";
 import Landing from "./components/landing/Landing";
+import SignIn from "./components/signIn/SignIn";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,7 +21,8 @@ root.render(
           <Route index element={<Landing />} />
           <Route path="cover" element={<Cover />} />
           <Route path="profile" element={<ProfilePage />} />
-          <Route path="*" element={<Navigate to={"/"}/>} />
+          <Route path="signin" element={<SignIn />} />
+          <Route path="*" element={<Navigate to={"/"} />} />
         </Route>
       </Routes>
     </BrowserRouter>

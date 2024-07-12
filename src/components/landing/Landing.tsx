@@ -61,7 +61,7 @@ const Landing = (props: Props) => {
             <div className="email-input-container">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Email address"
                 className="email-input"
               />
               <button className="hero-1-email-btn">Get Started {">"}</button>
