@@ -1,11 +1,18 @@
 import React from "react";
 import Hero from "../../assets/Hero.png";
+import Popcorn from "../../assets/Popcorn.png";
 
 import "./Landing.css";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const Landing = (props: Props) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/cover", { replace: true });
+  };
   return (
     <div className="landing-container">
       <div className="hero-1-container">
@@ -27,7 +34,20 @@ const Landing = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="hero-1-container">Hero 2</div>
+      <div className="hero-2-container">
+        <img className="hero-2-img" src={Popcorn} alt="missing" />
+        <div className="hero-2-info">
+          <div className="hero-2-info-title">
+            The Netflix you love for just $6.99.
+          </div>
+          <div className="hero-2-info-subtitle">
+            Get the Standard with ads plan.
+          </div>
+          <button className="hero-2-info-link" onClick={handleClick}>
+            Learn More {">"}
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
