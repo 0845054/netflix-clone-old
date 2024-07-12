@@ -1,5 +1,7 @@
 :root {
   --black-color: #141414;
+  --black-background-color: #000000;
+  /* --black-background-color: red; */
   --red-color: #e50914;
   --red-hover-color: #c11119;
   --white-color: #ffffff;
