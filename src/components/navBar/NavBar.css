@@ -26,6 +26,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.navBar-btn:hover {
+  background-color: var(--red-hover-color);
+  cursor: pointer;
+}
+
 .navBar-select {
   height: 100%;
   padding: 0px 8px;
