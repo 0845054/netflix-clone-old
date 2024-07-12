@@ -14,14 +14,27 @@ const SignIn = (props: Props) => {
           <input
             type="email"
             placeholder="Email or phone number"
-            className="email-input"
+            className="signin-input-field"
           />
           <input
             type="password"
             placeholder="Password"
-            className="email-input"
+            className="signin-input-field"
           />
           <button className="signin-btn">Sign In</button>
+          <h1 className="siginin-or">OR</h1>
+          <button className="signin-btn-helper">Use a Sign-In Code</button>
+          <button className="signin-btn-helper">Forget Password?</button>
+          <label className="signin-rememberme">
+            <input className="signin-rememberme-checkbox" type="checkbox" />
+            Remember Me?
+          </label>
+          <div className="sigin-text-container">
+            
+              <div className="signin-text">New to Netflix?</div>
+              <b className="signin-text-signup"> Sign up now.</b>
+           
+          </div>
         </div>
       </div>
     </div>
