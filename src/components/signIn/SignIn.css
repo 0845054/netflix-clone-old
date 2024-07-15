@@ -44,6 +44,7 @@
   border-radius: 0.2rem;
   border-color: var(--white-color);
   padding-left: 16px;
+  color: var(--white-color);
 }
 
 .signin-btn {
@@ -105,4 +106,100 @@
 .signin-text-signup:hover {
   color: var(--grey-text-color);
   cursor: pointer;
+}
+
+/* .signin-rememberme-checkbox {
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+} */
+
+.signin-text-remark {
+  font-weight: 50;
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+.signin-text-link {
+  color: #0071eb;
+  text-decoration: none;
+}
+
+.signin-text-link:hover {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .signin-text-signup:hover {
+    animation: signin-text-signup-shake infinite 0.5s linear;
+  }
+}
+
+@keyframes signin-text-signup-shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-2px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .signin-btn:hover {
+    animation: signin-text-signup-jump infinite 0.5s linear;
+  }
+}
+
+@keyframes signin-text-signup-jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .signin-btn-helper:hover {
+    animation: signin-btn-helper-move infinite 0.5s linear;
+  }
+}
+
+@keyframes signin-btn-helper-move {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  75% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

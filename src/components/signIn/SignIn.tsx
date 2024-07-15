@@ -30,10 +30,15 @@ const SignIn = (props: Props) => {
             Remember Me?
           </label>
           <div className="sigin-text-container">
-            
-              <div className="signin-text">New to Netflix?</div>
-              <b className="signin-text-signup"> Sign up now.</b>
-           
+            <div className="signin-text">New to Netflix?</div>
+            <b className="signin-text-signup"> Sign up now.</b>
+          </div>
+          <div className="signin-text-remark">
+            This page is protected by Google reCAPTCHA to ensure you’re not a
+            bot.{" "}
+            <a href="/signin" className="signin-text-link">
+              Learn more.
+            </a>
           </div>
         </div>
       </div>
