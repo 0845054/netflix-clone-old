@@ -9,6 +9,7 @@ import Cover from "./components/cover/Cover";
 import ProfilePage from "./components/profilePage/ProfilePage";
 import Landing from "./components/landing/Landing";
 import SignIn from "./components/signIn/SignIn";
+import AccountHome from "./components/accountHome/AccountHome";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -22,6 +23,7 @@ root.render(
           <Route path="cover" element={<Cover />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="signin" element={<SignIn />} />
+          <Route path="accountHome" element={<AccountHome />} />
           <Route path="*" element={<Navigate to={"/"} />} />
         </Route>
       </Routes>

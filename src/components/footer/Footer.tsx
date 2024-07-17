@@ -33,9 +33,11 @@ const Footer = (props: Props) => {
       <div className="footer-qns">Questions? Call 1-844-505-2993</div>
       <div className="footer-links">
         {links.map((l) => {
-          return <div className="footer-link">
-            <span>{l.name}</span>
-            </div>;
+          return (
+            <div className="footer-link" key={l.id}>
+              <span>{l.name}</span>
+            </div>
+          );
         })}
       </div>
       <div className="footer-language">

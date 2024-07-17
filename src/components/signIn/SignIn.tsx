@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "../../assets/Hero.png";
 import "./SignIn.css";
+import { login } from "../../services/api.service";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 type Props = {};
 
 const SignIn = (props: Props) => {
+  const navigate = useNavigate();
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const onSubmitForm = () => {
+    const response: any = login(form.email, form.password);
+    console.log(response);
+    if (false) {
+      const token = response.token;
+      // Set the JWT in a cookie
+      Cookies.set("token", token, { expires: 7, secure: true });
+    }
+  };
+
   return (
     <div className="signin-container">
       <img className="hero-1-img" src={Hero} alt="missing"></img>
@@ -13,15 +32,22 @@ const SignIn = (props: Props) => {
         <div className="signin-input">
           <input
             type="email"
-            placeholder="Email or phone number"
+            placeholder="Email"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
             className="signin-input-field"
           />
           <input
             type="password"
             placeholder="Password"
+            value={form.password}
+            onChange={(e) => setForm({ ...form, password: e.target.value })}
             className="signin-input-field"
           />
-          <button className="signin-btn">Sign In</button>
+          <button className="signin-btn" onClick={onSubmitForm}>
+            Sign In
+          </button>
+
           <h1 className="siginin-or">OR</h1>
           <button className="signin-btn-helper">Use a Sign-In Code</button>
           <button className="signin-btn-helper">Forget Password?</button>
