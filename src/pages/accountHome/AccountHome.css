@@ -9,20 +9,26 @@
   color: var(--red-color);
   display: flex;
   justify-content: center;
-  align-items: left;
   position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-2-title-container {
+.acc-img {
+  width: 100%;
+}
+
+.acc-title-container {
   background-image: none;
   position: absolute;
-  left: 3rem;
+  left: 7rem;
   top: 15rem;
   z-index: 1;
-  align-items: left;
+  text-align: left;
 }
 
-.hero-2-desc {
+.acc-desc {
   color: white;
   padding-top: 20px;
   word-wrap: break-word;
@@ -31,7 +37,21 @@
   text-align: left;
 }
 
-.play-btn {
+.buttons-container {
+  padding-top: 1rem;
   align-items: left;
-  justify-content: flex-start;
+  display: flex;
+  gap: 15px;
+  height: 42px;
+}
+
+.acc-btn {
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+}
+
+.acc-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }

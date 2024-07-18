@@ -14,13 +14,15 @@ const SignIn = (props: Props) => {
     password: "",
   });
 
-  const onSubmitForm = () => {
-    const response: any = login(form.email, form.password);
-    console.log(response);
-    if (false) {
-      const token = response.token;
+  const onSubmitForm = async () => {
+    const response: any = await login(form.email, form.password);
+    if (response.ok) {
+      const token = response.json().token;
       // Set the JWT in a cookie
-      Cookies.set("token", token, { expires: 7, secure: true });
+      Cookies.set("token", token, { expires: 1, secure: true });
+      navigate("/profile");
+    } else {
+      console.log("Error form");
     }
   };
 
